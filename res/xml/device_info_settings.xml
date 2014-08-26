@@ -112,7 +112,7 @@
         <Preference android:key="venture_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/venture_version"
-                android:summary="@string/pa_version_default" />
+                android:summary="@string/venture_version_default" />
 
         <!-- Device FCC equipment id -->
         <Preference android:key="fcc_equipment_id"
