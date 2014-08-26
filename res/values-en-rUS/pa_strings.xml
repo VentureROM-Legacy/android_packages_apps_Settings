@@ -112,8 +112,8 @@
   <string name="background_result_successful">Background changed</string>
   <string name="background_result_not_successful">Background not changed</string>
   <string name="setting_lockscreen_background">Applying background</string>
-  <string name="pa_version">VentureROM version</string>
-  <string name="pa_version_default">Unknown</string>
+  <string name="venture_version">VentureROM version</string>
+  <string name="venture_version_default">Unknown</string>
   <string name="themes_settings_title">Themes</string>
   <string name="themepacks_settings_title">Theme Packs</string>
   <string name="styles_settings_title">Styles</string>
