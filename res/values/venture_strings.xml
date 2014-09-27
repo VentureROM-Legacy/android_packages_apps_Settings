@@ -158,9 +158,11 @@
     <string name="background_result_not_successful">Background not changed</string>
     <string name="setting_lockscreen_background">Applying background</string>
 
-    <!-- PA version-->
-    <string name="pa_version">ParanoidAndroid version</string>
-    <string name="pa_version_default">Unknown</string>
+    <!-- VR details -->
+    <string name="venture_version">VentureROM version</string>
+    <string name="venture_version_default">Unknown</string>
+    <string name="venture_maintainer">VentureROM Device Maintainer</string>
+    <string name="venture_maintainer_default">Unknown</string>
 
     <!-- Proximity wake -->
     <string name="proximity_wake_title">Prevent accidental wake-up</string>

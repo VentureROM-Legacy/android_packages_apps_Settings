@@ -114,6 +114,12 @@
                 android:title="@string/venture_version"
                 android:summary="@string/venture_version_default" />
 
+        <!-- Device maintainer -->
+        <Preference android:key="venture_maintainer"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/venture_maintainer"
+                android:summary="@string/venture_maintainer_default" />
+
         <!-- Device FCC equipment id -->
         <Preference android:key="fcc_equipment_id"
                 style="?android:preferenceInformationStyle"

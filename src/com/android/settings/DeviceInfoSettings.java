@@ -35,6 +35,8 @@ import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -67,6 +69,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_VENTURE_VERSION = "venture_version";
     private static final String KEY_PARANOIDOTA = "paranoidota_settings";
+    private static final String KEY_VENTURE_MAINTAINER = "venture_maintainer";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -78,11 +81,30 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         super(null /* Don't PIN protect the entire screen */);
     }
 
+    public static String getProp(String prop) {
+        try {
+            Process process = Runtime.getRuntime().exec("getprop " + prop);
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
+                    process.getInputStream()));
+            StringBuilder log = new StringBuilder();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                log.append(line);
+            }
+            return log.toString();
+        } catch (IOException e) {
+            // Runtime error
+        }
+        return null;
+    }
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.device_info_settings);
+
+        String maintainer = getProp("ro.venture.maintainer");
 
         // We only call ensurePinRestrictedPreference() when mDevHitCountdown == 0.
         // This will keep us from entering developer mode without a PIN.
@@ -99,6 +121,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         findPreference(KEY_VENTURE_VERSION).setEnabled(true);
         setValueSummary(KEY_VENTURE_VERSION, "ro.venture.version");
+        findPreference(KEY_VENTURE_MAINTAINER).setSummary(maintainer);
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
