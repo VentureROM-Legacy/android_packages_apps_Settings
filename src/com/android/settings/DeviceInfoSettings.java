@@ -68,7 +68,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_VENTURE_VERSION = "venture_version";
-    private static final String KEY_PARANOIDOTA = "paranoidota_settings";
+    private static final String KEY_VENTUREOTA = "ventureota_settings";
     private static final String KEY_VENTURE_MAINTAINER = "venture_maintainer";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
@@ -149,9 +149,9 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         }
 
         if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
-            removePreferenceIfPackageNotInstalled(findPreference(KEY_PARANOIDOTA));
+            removePreferenceIfPackageNotInstalled(findPreference(KEY_VENTUREOTA));
         } else {
-            getPreferenceScreen().removePreference(findPreference(KEY_PARANOIDOTA));
+            getPreferenceScreen().removePreference(findPreference(KEY_VENTUREOTA));
         }
 
         /*
