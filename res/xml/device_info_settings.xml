@@ -17,12 +17,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <PreferenceScreen android:key="paranoidota_settings"
+        <PreferenceScreen android:key="ventureota_settings"
                 android:title="@string/system_update_settings_list_item_title" 
                 android:summary="@string/system_update_settings_list_item_summary">
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.paranoid.paranoidota"
-                    android:targetClass="com.paranoid.paranoidota.activities.SystemActivity" />
+                    android:targetPackage="com.venturerom.venture"
+                    android:targetClass="com.venturerom.venture.MainActivity" />
         </PreferenceScreen>
 
 
