@@ -98,6 +98,13 @@
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
 
+    <!-- Notify changed networks -->
+    <string name="wifi_notify_changed_networks">Wifi connected notification</string>
+    <string name="notify_changed_networks_default">Default - off</string>
+    <string name="notify_changed_networks_toast">Toast</string>
+    <string name="notify_changed_networks_notification">Notification</string>
+    <string name="notify_changed_networks_notification_sound">Notification with sound</string>
+
     <!--Volume buttons category-->
     <string name="volume_buttons_category">Volume buttons</string>
 
