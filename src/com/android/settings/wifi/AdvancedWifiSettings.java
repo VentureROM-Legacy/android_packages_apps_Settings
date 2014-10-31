@@ -225,7 +225,7 @@ public class AdvancedWifiSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(), Settings.System.WIFI_NETWORK_NOTIFICATIONS,
                     notifyValue);
             mNotifyChangedNetwork.setSummary(mNotifyChangedNetwork.getEntries()[index]);
-            mContext.sendBroadcast(new Intent("com.cm.UPDATE_NETWORK_PREFERENCES"));
+            getActivity().sendBroadcast(new Intent("com.cm.UPDATE_NETWORK_PREFERENCES"));
             return false;
         }
 
