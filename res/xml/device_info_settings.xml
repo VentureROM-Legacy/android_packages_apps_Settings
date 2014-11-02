@@ -22,7 +22,9 @@
                 android:summary="@string/system_update_settings_list_item_summary">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.venturerom.venture"
-                    android:targetClass="com.venturerom.venture.MainActivity" />
+                    android:targetClass="com.venturerom.venture.MainActivity">
+		<extra android:name="openUpdates" android:value="true" />
+	</intent>
         </PreferenceScreen>
 
 
