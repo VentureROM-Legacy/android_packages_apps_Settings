@@ -100,7 +100,7 @@
             android:title="@string/vibrator_intensity_title"
             android:dialogTitle="@string/vibrator_intensity_title"
             android:persistent="false" />
-    
+
     <!-- Dock -->
     <PreferenceCategory
         android:key="dock_category"
@@ -131,5 +131,5 @@
             android:summary="@string/headset_connect_player_summary"
             android:defaultValue="false" />
     </PreferenceCategory>
-    
+
 </PreferenceScreen>
