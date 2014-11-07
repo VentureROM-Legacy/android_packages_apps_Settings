@@ -86,7 +86,7 @@
         android:summary="@string/wake_when_plugged_or_unplugged_summary"
         android:defaultValue="false" />
 
-        <PreferenceCategory
+    <PreferenceCategory
         android:key="display_calibration_category"
         android:title="@string/display_calibration_title" >
 

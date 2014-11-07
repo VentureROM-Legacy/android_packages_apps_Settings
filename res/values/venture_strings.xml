@@ -241,7 +241,7 @@
     <string name="background_result_not_successful">Background not changed</string>
     <string name="setting_lockscreen_background">Applying background</string>
 
-   <!-- VR details -->
+    <!--VR details-->
     <string name="venture_version">VentureROM version</string>
     <string name="venture_version_default">Unknown</string>
     <string name="venture_maintainer">VentureROM Device Maintainer</string>
@@ -254,7 +254,7 @@
     <!-- Proximity wake -->
     <string name="proximity_wake_title">Prevent accidental wake-up</string>
     <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
-    
+ 
     <!-- Theme chooser -->
     <string name="themes_settings_title">Themes</string>
     <string name="themepacks_settings_title">Theme Packs</string>
@@ -290,5 +290,5 @@
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Launch music app</string>
     <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
-    
+
 </resources>
