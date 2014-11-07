@@ -21,16 +21,12 @@
                 android:title="@string/system_update_settings_list_item_title" 
                 android:summary="@string/system_update_settings_list_item_summary">
             <intent android:action="android.intent.action.MAIN"
-<<<<<<< HEAD
-                    android:targetPackage="com.paranoid.paranoidota"
-                    android:targetClass="com.paranoid.paranoidota.activities.SystemActivity" />
-=======
                     android:targetPackage="com.venturerom.venture"
                     android:targetClass="com.venturerom.venture.MainActivity">
 		<extra android:name="openUpdates" android:value="true" />
 	</intent>
->>>>>>> d4a9f84... Allow settings to open straight to updates [2/2]
-        </PreferenceScreen>
+
+	</PreferenceScreen>
 
 
         <PreferenceScreen android:key="additional_system_update_settings"
