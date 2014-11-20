@@ -176,6 +176,7 @@ public class ManageApplications extends Fragment implements
     public static final int APP_MOVING_DISABLE = MENU_OPTIONS_BASE + 9;
     public static final int RESET_APP_PREFERENCES = MENU_OPTIONS_BASE + 10;
     public static final int SHOW_PROTECTED_APPS = MENU_OPTIONS_BASE + 11;
+    public static final int SHOW_RUNNING_SERVICES = MENU_OPTIONS_BASE + 12;
 
     // sort order
     private int mSortOrder = SORT_ORDER_ALPHA;
@@ -1075,6 +1076,8 @@ public class ManageApplications extends Fragment implements
         menu.add(0, SORT_ORDER_SIZE, 2, R.string.sort_order_size)
                 //.setIcon(android.R.drawable.ic_menu_sort_by_size)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        menu.add(0, SHOW_APP_OPS, 3, R.string.show_app_ops)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_NEVER);
         menu.add(0, SHOW_RUNNING_SERVICES, 3, R.string.show_running_services)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         menu.add(0, SHOW_BACKGROUND_PROCESSES, 3, R.string.show_background_processes)
@@ -1121,6 +1124,7 @@ public class ManageApplications extends Fragment implements
                     ? tab.mRunningProcessesView.mAdapter.getShowBackground() : false;
             mOptionsMenu.findItem(SORT_ORDER_ALPHA).setVisible(false);
             mOptionsMenu.findItem(SORT_ORDER_SIZE).setVisible(false);
+            mOptionsMenu.findItem(SHOW_APP_OPS).setVisible(true;
             mOptionsMenu.findItem(SHOW_RUNNING_SERVICES).setVisible(showingBackground);
             mOptionsMenu.findItem(SHOW_BACKGROUND_PROCESSES).setVisible(!showingBackground);
             mOptionsMenu.findItem(APP_MOVING_ENABLE).setVisible(false);
@@ -1266,6 +1270,9 @@ public class ManageApplications extends Fragment implements
             mShowBackground = false;
             if (mCurTab != null && mCurTab.mRunningProcessesView != null) {
                 mCurTab.mRunningProcessesView.mAdapter.setShowBackground(false);
+            }
+        } else if (menuId == SHOW_APP_OPS) {
+            startActivity(new Intent("android.settings.APP_OPS_SETTINGS"));
             }
         } else if (menuId == SHOW_BACKGROUND_PROCESSES) {
             mShowBackground = true;
